@@ -28,28 +28,41 @@ export default function pageLoad () {
     heroImage.src = '../assets/racoon-chef.jpg';
     heroImageContainer.appendChild(heroImage);
 
-    const heroHoursContainer = document.createElement('div');
+
+    const heroTitle = document.createElement('h1');
+    heroTitle.classList.add('h1-overlay');
+    heroTitle.textContent = "Trashy Food Inc.";
+
+
     const heroHoursText = document.createElement('p');
-    
+    heroHoursText.classList.add('text-overlay');
     const textNode1 = document.createTextNode("Opening Hours");
     const br = document.createElement('br');
-    const textNode2 = document.createTextNode("Monday to Friday: 4pm - 10pm");
-    
+    const textNode2 = document.createTextNode("Monday to Friday: 4pm - 10pm");    
     heroHoursText.appendChild(textNode1);
     heroHoursText.appendChild(br);
     heroHoursText.appendChild(textNode2);
     
-    
-    heroHoursContainer.appendChild(heroHoursText);
-    heroImageContainer.appendChild(heroHoursContainer)
+    heroImageContainer.appendChild(heroTitle);
+    heroImageContainer.appendChild(heroHoursText)
 
     heroContainer.appendChild(heroImageContainer);
 
 
     // About
 
+    const aboutContainer = document.createElement('div');
+    aboutContainer.id = "about";
+
+    const aboutText = document.createElement('p');
+    aboutText.textContent = "We believe in stopping food waste. That is why we, at Trashy Food Inc., will bring you exceptional culinary expriences created from the food that would otherwise have gone to waste. Does that mean all the food we are serving is rotten? No. We have parnered with a bunch of local supermarkets and take anything from them that reaches its best before date. We don't serve you anything we wouldn't eat ourselves ;)";
+
+    aboutContainer.appendChild(aboutText);
+
 
     //Body End
     contentContainer.appendChild(menuContainer);
     contentContainer.appendChild(heroContainer);
+    contentContainer.appendChild(aboutContainer);
+
 }
