@@ -1,4 +1,4 @@
-export default function pageLoad () {
+export default function pageLoadHome () {
     // Body Start
     const contentContainer = document.querySelector('#content');
 
@@ -7,14 +7,17 @@ export default function pageLoad () {
     menuContainer.id = "menu";
     
     const menuElementOne = document.createElement('div');
+    menuElementOne.id = "menu-one";
     menuElementOne.textContent = "Home";
     menuContainer.appendChild(menuElementOne);
 
     const menuElementTwo = document.createElement('div');
+    menuElementTwo.id = "menu-two";
     menuElementTwo.textContent = "Menu";
     menuContainer.appendChild(menuElementTwo);
 
     const menuElementThree = document.createElement('div');
+    menuElementThree.id = "menu-three";
     menuElementThree.textContent = "Contact";
     menuContainer.appendChild(menuElementThree);
 
