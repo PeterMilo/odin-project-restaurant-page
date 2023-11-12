@@ -1,22 +1,26 @@
 export default function pageLoadHome () {
+    
+    
     // Body Start
     const contentContainer = document.querySelector('#content');
+    contentContainer.innerHTML = "";
+
 
     //Menu
     const menuContainer = document.createElement('div');
     menuContainer.id = "menu";
     
-    const menuElementOne = document.createElement('div');
+    const menuElementOne = document.createElement('button');
     menuElementOne.id = "menu-one";
     menuElementOne.textContent = "Home";
     menuContainer.appendChild(menuElementOne);
 
-    const menuElementTwo = document.createElement('div');
+    const menuElementTwo = document.createElement('button');
     menuElementTwo.id = "menu-two";
     menuElementTwo.textContent = "Menu";
     menuContainer.appendChild(menuElementTwo);
 
-    const menuElementThree = document.createElement('div');
+    const menuElementThree = document.createElement('button');
     menuElementThree.id = "menu-three";
     menuElementThree.textContent = "Contact";
     menuContainer.appendChild(menuElementThree);

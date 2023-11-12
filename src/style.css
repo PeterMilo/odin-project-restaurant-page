@@ -15,9 +15,7 @@
 #hero {
     display: grid;
     width: 100%;
-    /* max-width: 800px; */
     margin: 0 auto; /* Center the content horizontally */
-    /* max-height: 400px; */
 }
 
 #image-container {
